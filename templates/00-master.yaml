@@ -931,7 +931,7 @@ Resources:
           !GetAtt [ vpc, Outputs.DataSubnet ]
         NumberOfSubnets:
           !Ref NumberOfAZs
-      TemplateURL: https://s3.amazonaws.com/aws-refarch/moodle/latest/templates/03-rds.yaml
+      TemplateURL: https://awspeter.github.io/aws-refarch-moodle/templates/03-rds.yaml
   efsfilesystem:
     DependsOn: securitygroups
     Type: AWS::CloudFormation::Stack
@@ -955,7 +955,7 @@ Resources:
           !Ref EfsPerformanceMode
         Subnet:
           !GetAtt [ vpc, Outputs.DataSubnet ]
-      TemplateURL: https://s3.amazonaws.com/aws-refarch/moodle/latest/templates/03-efsfilesystem.yaml
+      TemplateURL: https://awspeter.github.io/aws-refarch-moodle/templates/03-efsfilesystem.yaml
   sessioncache:
     Condition: DeployWithSessionCache
     DependsOn: securitygroups
